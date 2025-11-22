@@ -11,5 +11,7 @@ func main() {
 
 	var c, d int = 1, 6
 
-	fmt.Println(a, b, name, c, d)
+	l := true
+
+	fmt.Println(a, b, name, c, d, l)
 }
