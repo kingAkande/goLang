@@ -3,19 +3,16 @@ package main
 import "fmt"
 
 func main(){
-	aString := "hello"
+	name:= "ILYAS"
 
-	manipulateString := []byte(aString)
+	convertName := []byte(name)
 
-	 manipulateString[0] = 'A'
+	convertName[0] = 'i'
 
-	alterAletterIntheString := string(manipulateString)
+	alteredName := string(convertName)
 
-
-	fmt.Println(aString)
-
-	fmt.Println(manipulateString)
-	fmt.Println(alterAletterIntheString)
-
+	fmt.Println(name)
+	fmt.Println(convertName)
+	fmt.Println(alteredName)
 }
 
