@@ -1,0 +1,124 @@
+package main
+
+import "github.com/01-edu/z01"
+
+func main() {
+	// QuadA(5, 3)
+	quadding(6, 9)
+}
+func QuadA(x, y int) {
+	if x <= 0 || y <= 0 {
+		return
+	}
+	for row := 1; row <= y; row++ {
+		for col := 1; col <= x; col++ {
+			if (row == 1 && col == 1) || (row == 1 && col == x) ||
+				(row == y && col == 1) || (row == y && col == x) {
+				z01.PrintRune('o')
+			} else if row == 1 || row == y {
+				z01.PrintRune('-')
+			} else if col == 1 || col == x {
+				z01.PrintRune('|')
+			} else {
+				z01.PrintRune(' ')
+			}
+		}
+		z01.PrintRune('\n')
+	}
+}
+
+func quadding(x, y int) {
+
+	if x <= 0 || y <= 0 {
+		return
+	}
+
+	for row := 1; row <= y; row++ {
+		for col := 1; col <= x; col++ {
+			if (row == 1 && col == 1) || (row == 1 && col == x) || (row == y && col == 1) || (row == y && col == x) {
+				z01.PrintRune('o')
+			} else if row == 1 || row == y {
+				z01.PrintRune('-')
+			} else if col == 1 || col == x {
+				z01.PrintRune('|')
+			} else {
+				z01.PrintRune(' ')
+			}
+		}
+		z01.PrintRune('\n')
+	}
+}
+
+package main
+
+import "github.com/01-edu/z01"
+
+func main() {
+
+	// QuadB(5 , 3)
+	quading(5, 3)
+}
+
+func QuadB(x, y int) {
+	if x <= 0 || y <= 0 {
+		return
+	}
+
+	for row := 1; row <= y; row++ {
+		for col := 1; col <= x; col++ {
+			if row == 1 && col == 1 {
+				z01.PrintRune('/')
+			} else if row == 1 && col == x {
+				z01.PrintRune('\\')
+			} else if row == y && col == 1 {
+				z01.PrintRune('\\')
+			} else if row == y && col == x {
+				z01.PrintRune('/')
+			} else if row == 1 || row == y {
+				z01.PrintRune('*')
+			} else if col == 1 || col == x {
+				z01.PrintRune('*')
+			} else {
+				z01.PrintRune(' ')
+			}
+		}
+		z01.PrintRune('\n')
+	}
+}
+
+func quading(x, y int) {
+
+	if x <= 0 || y <= 0 {
+		return
+	}
+
+	for row := 1; row <= y; row++ {
+		for col := 1; col <= x; col++ {
+			if row == 1 && col == 1 {
+				z01.PrintRune('/')
+			} else if row == 1 && col == x {
+				z01.PrintRune('\\')
+			} else if row == y && col == 1 {
+				z01.PrintRune('\\')
+
+			} else if row == y && col == x {
+				z01.PrintRune('/')
+
+			} else if row == 1 || row == y {
+				z01.PrintRune('*')
+
+			} else if col == 1 || col == x {
+				z01.PrintRune('*')
+
+			} else {
+				z01.PrintRune(' ')
+
+			}
+
+		}
+
+		z01.PrintRune('\n')
+	}
+}
+
+
