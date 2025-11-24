@@ -14,5 +14,6 @@ func main(){
 	fmt.Println(name)
 	fmt.Println(convertName)
 	fmt.Println(alteredName)
+	
 }
 
