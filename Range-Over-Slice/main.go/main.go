@@ -39,7 +39,7 @@ func gdp(x, y int) int {
 			result = item
 
 		}
-	}
+		}
 
 	return result
 
@@ -56,3 +56,4 @@ func Gcd(a, b uint) uint {
 
 	return a
 }
+
