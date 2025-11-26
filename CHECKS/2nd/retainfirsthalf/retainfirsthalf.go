@@ -20,12 +20,17 @@ func main() {
 }
 
 func RetainFirstHalf(arg string) string {
-	convrtetd str := 
-	if arg == "" {
+
+	length := len(arg)
+
+	if length == 0 {
 		return ""
-	} else if len(arg) == 1 {
-		return arg
-	} else {
-		return len(arg)
 	}
+
+	if length == 1 {
+		return arg
+	}
+
+	return arg[:length/2]
+
 }
