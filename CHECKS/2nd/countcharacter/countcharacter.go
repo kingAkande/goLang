@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-
 /**
 
 
@@ -14,14 +13,26 @@ if the character is not in the string return 0
 if the string is empty return 0
 */
 
-func main(){
-	
+func main() {
+	fmt.Println(CountChar("Hello World", 'l'))
+	fmt.Println(CountChar("5  balloons", 5))
+	fmt.Println(CountChar("   ", ' '))
+	fmt.Println(CountChar("The 7 deadly sins", '7'))
 }
 
-
-
 func CountChar(str string, c rune) int {
-    if str == "" && c == '' {
-		return  0
-	} 
+	if str == "" {
+		return 0
+	}
+
+	count := 0
+
+	for _, item := range str {
+
+		if item == c {
+			count++
+		}
+	}
+
+	return count
 }

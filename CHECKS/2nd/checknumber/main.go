@@ -30,18 +30,3 @@ func CheckNumber(arg string) bool {
 	}
 	return false
 }
-
-
-func ch(s string) bool{
-	if s==""{
-		return  false
-	}
-
-	for _,item := range s {
-		if item >='0' && item <='9'{
-			return true
-		}
-	}
-
-	return  true
-}
