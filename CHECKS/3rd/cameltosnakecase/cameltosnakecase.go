@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 /**
@@ -45,8 +44,8 @@ func containAlphabet(arg string) bool {
 	return true
 }
 
-func isUppercase(arg rune) bool {
-	return (arg >= 'A' || arg <= 'B')
+func isUpperCase(arg rune) bool {
+	return arg >= 'A' && arg <= 'Z'
 }
 
 func CamelToSnakeCase(arg string) string {
@@ -57,14 +56,15 @@ func CamelToSnakeCase(arg string) string {
 	}
 
 	for i := 0; i < len(arg); i++ {
-		if i != 0 && isUppercase(rune(arg[i])) && i+1 < len(arg) && !isUppercase(rune(arg[i+1])) {
+		if i != 0 && isUpperCase(rune(arg[i])) && i+1 < len(arg) && !isUpperCase(rune(arg[i+1])) {
 			result += "_"
 			result += string(arg[i])
-		} else if !isUppercase(rune(arg[i])) || i == 0 && isUppercase(rune(arg[i+1])) {
+		} else if !isUpperCase(rune(arg[i])) || (i == 0 && isUpperCase(rune(arg[i]))) {
 			result += string(arg[i])
 		} else {
 			return arg
 		}
 	}
+
 	return result
 }
