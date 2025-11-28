@@ -39,3 +39,6 @@ func DigitLen(n, base int) int {
 	return count
 
 }
+
+
+
