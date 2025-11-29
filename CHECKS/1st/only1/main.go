@@ -15,7 +15,7 @@ $ go run . "a" "b"
 $ go run . "a" "b" "c"
 1*/
 
-func main() {
+func maain() {
 	fmt.Println("a")
 	z01.PrintRune('1')
 }

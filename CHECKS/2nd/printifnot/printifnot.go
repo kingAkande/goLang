@@ -27,7 +27,3 @@ func PrintIfNot(arg string) string {
 	}
 
 }
-
-// func PrintIfNot(str string) string {
-
-// }
