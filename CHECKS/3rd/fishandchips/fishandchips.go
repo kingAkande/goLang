@@ -1,4 +1,4 @@
-package main 
+package main
 
 import "fmt"
 
@@ -22,10 +22,10 @@ func main() {
 
 func FishAndChips(arg int) string {
 	if arg < 0 {
-		return  "number is negative"
+		return "number is negative"
 	}
-	
-	if arg%2==0 && arg%3 ==0 {
+
+	if arg%2 == 0 && arg%3 == 0 {
 		return ("fish and chips")
 
 	}
@@ -36,7 +36,5 @@ func FishAndChips(arg int) string {
 		return ("chips")
 	}
 
-
-	
-	 return  "non devisible"
+	return "non devisible"
 }
