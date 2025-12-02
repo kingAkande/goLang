@@ -30,3 +30,16 @@ func FirstWord(arg string) string {
 
 	return res
 }
+
+func first(arg string) string {
+
+	word := strings.Fields(arg)
+
+	res := "\n"
+
+	if len(word) > 0 {
+
+		return word[0] + res
+	}
+	return res
+}

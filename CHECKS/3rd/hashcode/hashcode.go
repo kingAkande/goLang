@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"hash"
+	// "hash"
 )
 
 /**
@@ -24,6 +24,7 @@ func main() {
 }
 
 func HashCode(arg string) string {
+
 	size := len(arg)
 
 	hashed := ""
