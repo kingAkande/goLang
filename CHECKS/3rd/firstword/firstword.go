@@ -30,3 +30,4 @@ func FirstWord(arg string) string {
 
 	return res
 }
+

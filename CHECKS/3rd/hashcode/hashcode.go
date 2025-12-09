@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	// "hash"
+	"hash"
 )
 
 /**
@@ -42,18 +42,3 @@ func HashCode(arg string) string {
 
 }
 
-// func code(arg string) string {
-// 	size := len(arg)
-
-// 	hashRes := ""
-
-// 	for _, item := range arg {
-// 		harsh := (int(item) + size) % 127
-
-// 		if harsh < 32 || harsh > 126 {
-// 			harsh += 33
-// 		}
-// 		hashRes += string(harsh)
-// 	}
-// 	return hashRes
-// }
