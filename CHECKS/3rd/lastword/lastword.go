@@ -19,3 +19,4 @@ func LastWord(arg string) string {
 
 	return "\n"
 }
+
