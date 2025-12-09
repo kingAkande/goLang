@@ -4,6 +4,7 @@ import "github.com/01-edu/z01"
 
 func main() {
 	// QuadA(5, 3)
+	quading(5, 3)
 	quadding(6, 9)
 }
 func QuadA(x, y int) {
@@ -49,15 +50,8 @@ func quadding(x, y int) {
 	}
 }
 
-package main
 
-import "github.com/01-edu/z01"
 
-func main() {
-
-	// QuadB(5 , 3)
-	quading(5, 3)
-}
 
 func QuadB(x, y int) {
 	if x <= 0 || y <= 0 {
