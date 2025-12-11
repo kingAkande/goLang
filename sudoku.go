@@ -1,3 +1,5 @@
+package main
+
 /** os is the package that enables go interact with the computers operating system....
 
 os.ARG is the list of everything you typed when running the programm.. access an  array that contains the progamme name an other instruction

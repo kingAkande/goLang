@@ -1,6 +1,8 @@
 package main
 
-import "strconv"
+import (
+	"fmt"
+)
 
 /*
 Write a function that takes two integers and returns a string showing the range of numbers from the first to the second.
@@ -13,41 +15,48 @@ Add a new line \n at the end of the string.
 
 **/
 
+func main() {
+	fmt.Print(FromTo(1, 10))
+	fmt.Print(FromTo(10, 1))
+	fmt.Print(FromTo(10, 10))
+	fmt.Print(FromTo(100, 10))
+}
+
+
 func FromTo(from int, to int) string {
+	// Invalid input check
+	if from < 0 || from > 99 || to < 0 || to > 99 {
+		return "Invalid\n"
+	}
+
+	// If both numbers are the same
+	if from == to {
+		return fmt.Sprintf("%02d\n", from)
+	}
+
 	result := ""
 
-	if from < 0 || from > 99 || to < 0 || to > 99 {
-		return "invalid \n"
-	} else if from == to && from < 10 {
-		result += "0" + strconv.Itoa(from) + "\n"
-	}
-
-	if from > 10 {
-		for i := from; i >= 10; i++ {
-			if i < 10 {
-				result += "0"
-			}
-			result += strconv.Itoa(i)
-			if i-1 >= 10 {
+	// Count up (from < to)
+	if from < to {
+		for i := from; i <= to; i++ {
+			result += fmt.Sprintf("%02d", i)
+			if i != to {
 				result += ", "
 			}
-
 		}
-		return result + "\n"
 	}
 
-	if from < 10 {
-		for i := from; i <= 10; i++ {
-			if i < 10 {
-				result += "0"
-			}
-			result += strconv.Itoa(i)
-			if i+1 >= 10 {
+	// Count down (from > to)
+	if from > to {
+		for i := from; i >= to; i-- {
+			result += fmt.Sprintf("%02d", i)
+			if i != to {
 				result += ", "
 			}
-
 		}
 	}
+
 	return result + "\n"
-
 }
+
+
